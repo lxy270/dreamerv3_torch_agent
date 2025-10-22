@@ -1,6 +1,6 @@
 import gym
 import numpy as np
-
+import memory_maze 
 ###from tf dreamerv2 code
 
 
@@ -8,6 +8,7 @@ class MemoryMaze:
     def __init__(self, task, obs_key="image", act_key="action", size=(64, 64), seed=0):
         # 9x9, 11x11, 13x13 and 15x15 are available
         self._env = gym.make(f"memory_maze:MemoryMaze-{task}-v0", seed=seed)
+        # self._env = gym.make(f"MemoryMaze-{task}-v0", seed=seed)
         self._obs_is_dict = hasattr(self._env.observation_space, "spaces")
         self._obs_key = obs_key
         self._act_key = act_key

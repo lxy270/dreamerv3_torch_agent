@@ -1,4 +1,5 @@
 #
+*.pt
 run*
 logdir*
 vis_*
